@@ -1,0 +1,5 @@
+C:\Users\peter\Packaging Calculation.exe
+C:\Users\peter\Packaging Calculation.dll
+C:\Users\peter\Packaging Calculation.deps.json
+C:\Users\peter\Packaging Calculation.runtimeconfig.json
+C:\Users\peter\Packaging Calculation.pdb
