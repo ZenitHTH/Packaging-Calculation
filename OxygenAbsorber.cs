@@ -28,7 +28,7 @@ public class OxygenAbsorber
 
 	public float OxygenAbsorberVolume()
     {
-		return PackageVolume() - (foodWeight * 0.21f);
+		return (PackageVolume() - foodWeight) * 0.21f;
     }
 }
 }

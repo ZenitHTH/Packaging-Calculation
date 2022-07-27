@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TabControl Main;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Slilca_gen = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnSGSubmit = new System.Windows.Forms.Button();
@@ -59,6 +60,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             Main = new System.Windows.Forms.TabControl();
             Main.SuspendLayout();
             this.Slilca_gen.SuspendLayout();
@@ -78,18 +82,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.ox_height)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ox_width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ox_length)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Main
             // 
             Main.Controls.Add(this.Slilca_gen);
             Main.Controls.Add(this.Oxygen_absorber);
-            Main.Dock = System.Windows.Forms.DockStyle.Bottom;
             Main.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Main.Location = new System.Drawing.Point(0, 77);
+            Main.Location = new System.Drawing.Point(0, 52);
             Main.Name = "Main";
             Main.SelectedIndex = 0;
-            Main.Size = new System.Drawing.Size(543, 373);
+            Main.Size = new System.Drawing.Size(481, 377);
             Main.TabIndex = 0;
             // 
             // Slilca_gen
@@ -98,7 +103,7 @@
             this.Slilca_gen.Location = new System.Drawing.Point(4, 24);
             this.Slilca_gen.Name = "Slilca_gen";
             this.Slilca_gen.Padding = new System.Windows.Forms.Padding(3);
-            this.Slilca_gen.Size = new System.Drawing.Size(535, 345);
+            this.Slilca_gen.Size = new System.Drawing.Size(473, 349);
             this.Slilca_gen.TabIndex = 0;
             this.Slilca_gen.Text = "Silica Gel";
             this.Slilca_gen.UseVisualStyleBackColor = true;
@@ -125,14 +130,14 @@
             this.splitContainer1.Panel2.Controls.Add(this.SG_PackageVolume);
             this.splitContainer1.Panel2.Controls.Add(this.label9);
             this.splitContainer1.Panel2.Controls.Add(this.label8);
-            this.splitContainer1.Size = new System.Drawing.Size(529, 339);
-            this.splitContainer1.SplitterDistance = 160;
+            this.splitContainer1.Size = new System.Drawing.Size(467, 343);
+            this.splitContainer1.SplitterDistance = 180;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
             // btnSGSubmit
             // 
-            this.btnSGSubmit.Location = new System.Drawing.Point(38, 233);
+            this.btnSGSubmit.Location = new System.Drawing.Point(52, 233);
             this.btnSGSubmit.Name = "btnSGSubmit";
             this.btnSGSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSGSubmit.TabIndex = 4;
@@ -184,11 +189,6 @@
             this.sg_height.Name = "sg_height";
             this.sg_height.Size = new System.Drawing.Size(152, 23);
             this.sg_height.TabIndex = 2;
-            this.sg_height.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.sg_height.ValueChanged += new System.EventHandler(this.sg_height_ValueChanged);
             // 
             // sg_width
@@ -208,11 +208,6 @@
             this.sg_width.Name = "sg_width";
             this.sg_width.Size = new System.Drawing.Size(152, 23);
             this.sg_width.TabIndex = 1;
-            this.sg_width.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.sg_width.ValueChanged += new System.EventHandler(this.sg_width_ValueChanged);
             // 
             // sg_Length
@@ -232,34 +227,34 @@
             this.sg_Length.Name = "sg_Length";
             this.sg_Length.Size = new System.Drawing.Size(152, 23);
             this.sg_Length.TabIndex = 0;
-            this.sg_Length.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.sg_Length.ValueChanged += new System.EventHandler(this.sg_Length_ValueChanged);
             // 
             // SG_SilicaGelVolume
             // 
+            this.SG_SilicaGelVolume.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SG_SilicaGelVolume.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SG_SilicaGelVolume.Location = new System.Drawing.Point(66, 142);
+            this.SG_SilicaGelVolume.Location = new System.Drawing.Point(26, 117);
             this.SG_SilicaGelVolume.Name = "SG_SilicaGelVolume";
+            this.SG_SilicaGelVolume.ReadOnly = true;
             this.SG_SilicaGelVolume.Size = new System.Drawing.Size(231, 35);
             this.SG_SilicaGelVolume.TabIndex = 3;
             // 
             // SG_PackageVolume
             // 
+            this.SG_PackageVolume.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SG_PackageVolume.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SG_PackageVolume.Location = new System.Drawing.Point(66, 36);
+            this.SG_PackageVolume.Location = new System.Drawing.Point(26, 42);
             this.SG_PackageVolume.Name = "SG_PackageVolume";
+            this.SG_PackageVolume.ReadOnly = true;
             this.SG_PackageVolume.Size = new System.Drawing.Size(231, 35);
             this.SG_PackageVolume.TabIndex = 2;
+            this.SG_PackageVolume.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.SG_PackageVolume_MaskInputRejected);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(81, 109);
+            this.label9.Location = new System.Drawing.Point(41, 84);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(202, 30);
             this.label9.TabIndex = 1;
@@ -269,11 +264,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(95, 3);
+            this.label8.Location = new System.Drawing.Point(35, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 30);
+            this.label8.Size = new System.Drawing.Size(208, 30);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Package Volume";
+            this.label8.Text = "Package Volume (CC)";
             // 
             // Oxygen_absorber
             // 
@@ -281,10 +276,11 @@
             this.Oxygen_absorber.Location = new System.Drawing.Point(4, 24);
             this.Oxygen_absorber.Name = "Oxygen_absorber";
             this.Oxygen_absorber.Padding = new System.Windows.Forms.Padding(3);
-            this.Oxygen_absorber.Size = new System.Drawing.Size(535, 345);
+            this.Oxygen_absorber.Size = new System.Drawing.Size(473, 349);
             this.Oxygen_absorber.TabIndex = 1;
             this.Oxygen_absorber.Text = "Oxygen Absorber";
             this.Oxygen_absorber.UseVisualStyleBackColor = true;
+            this.Oxygen_absorber.Click += new System.EventHandler(this.Oxygen_absorber_Click);
             // 
             // splitContainer2
             // 
@@ -311,13 +307,14 @@
             this.splitContainer2.Panel2.Controls.Add(this.label10);
             this.splitContainer2.Panel2.Controls.Add(this.label11);
             this.splitContainer2.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel2_Paint);
-            this.splitContainer2.Size = new System.Drawing.Size(529, 365);
-            this.splitContainer2.SplitterDistance = 160;
+            this.splitContainer2.Size = new System.Drawing.Size(755, 343);
+            this.splitContainer2.SplitterDistance = 180;
             this.splitContainer2.TabIndex = 0;
+            this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer2_SplitterMoved);
             // 
             // btnOXASubmit
             // 
-            this.btnOXASubmit.Location = new System.Drawing.Point(41, 280);
+            this.btnOXASubmit.Location = new System.Drawing.Point(52, 270);
             this.btnOXASubmit.Name = "btnOXASubmit";
             this.btnOXASubmit.Size = new System.Drawing.Size(75, 23);
             this.btnOXASubmit.TabIndex = 14;
@@ -328,7 +325,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 196);
+            this.label7.Location = new System.Drawing.Point(11, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 15);
             this.label7.TabIndex = 13;
@@ -342,7 +339,7 @@
             0,
             0,
             131072});
-            this.ox_foodWeight.Location = new System.Drawing.Point(5, 214);
+            this.ox_foodWeight.Location = new System.Drawing.Point(5, 203);
             this.ox_foodWeight.Maximum = new decimal(new int[] {
             20000,
             0,
@@ -416,11 +413,6 @@
             this.ox_width.Name = "ox_width";
             this.ox_width.Size = new System.Drawing.Size(152, 23);
             this.ox_width.TabIndex = 7;
-            this.ox_width.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.ox_width.ValueChanged += new System.EventHandler(this.ox_width_ValueChanged);
             // 
             // ox_length
@@ -440,36 +432,35 @@
             this.ox_length.Name = "ox_length";
             this.ox_length.Size = new System.Drawing.Size(152, 23);
             this.ox_length.TabIndex = 6;
-            this.ox_length.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.ox_length.ValueChanged += new System.EventHandler(this.ox_length_ValueChanged);
             // 
             // OX_PackageVolume
             // 
+            this.OX_PackageVolume.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OX_PackageVolume.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OX_PackageVolume.Location = new System.Drawing.Point(68, 36);
+            this.OX_PackageVolume.Location = new System.Drawing.Point(26, 42);
             this.OX_PackageVolume.Name = "OX_PackageVolume";
+            this.OX_PackageVolume.ReadOnly = true;
             this.OX_PackageVolume.Size = new System.Drawing.Size(231, 35);
             this.OX_PackageVolume.TabIndex = 5;
             // 
             // OX_Oxygen_Absorber_Volume
             // 
+            this.OX_Oxygen_Absorber_Volume.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OX_Oxygen_Absorber_Volume.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OX_Oxygen_Absorber_Volume.Location = new System.Drawing.Point(68, 142);
+            this.OX_Oxygen_Absorber_Volume.Location = new System.Drawing.Point(26, 117);
             this.OX_Oxygen_Absorber_Volume.Name = "OX_Oxygen_Absorber_Volume";
+            this.OX_Oxygen_Absorber_Volume.ReadOnly = true;
             this.OX_Oxygen_Absorber_Volume.Size = new System.Drawing.Size(231, 35);
             this.OX_Oxygen_Absorber_Volume.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(41, 109);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(11, 84);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(293, 30);
+            this.label10.Size = new System.Drawing.Size(267, 25);
             this.label10.TabIndex = 3;
             this.label10.Text = "Oxygen Absorber Volume (CC)";
             // 
@@ -477,17 +468,17 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(95, 3);
+            this.label11.Location = new System.Drawing.Point(35, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(165, 30);
+            this.label11.Size = new System.Drawing.Size(208, 30);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Package Volume";
+            this.label11.Text = "Package Volume (CC)";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(101, 3);
+            this.label12.Location = new System.Drawing.Point(206, 3);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(330, 45);
             this.label12.TabIndex = 1;
@@ -496,23 +487,60 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(174, 48);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(612, 427);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(169, 21);
+            this.label13.Size = new System.Drawing.Size(160, 20);
             this.label13.TabIndex = 2;
             this.label13.Text = "by Settawat Boriruklert";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(672, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(4, 431);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "v.0.11";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(486, 100);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(275, 307);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 450);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(770, 447);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(Main);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(786, 486);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Packing Calcultion";
             this.Load += new System.EventHandler(this.Form1_Load);
             Main.ResumeLayout(false);
             this.Slilca_gen.ResumeLayout(false);
@@ -536,6 +564,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ox_height)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ox_width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ox_length)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,5 +603,8 @@
         private Label label13;
         private Button btnOXASubmit;
         private Button btnSGSubmit;
+        private PictureBox pictureBox1;
+        private Label label14;
+        private PictureBox pictureBox2;
     }
 }

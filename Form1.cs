@@ -69,15 +69,35 @@ namespace Packaging_Calculation
         private void btnSGSubmit_Click(object sender, EventArgs e)
         {
             silicaGel sg = new silicaGel((float)sg_height.Value, (float)sg_Length.Value , (float)sg_width.Value);
-            SG_PackageVolume.Text = sg.PackageVolume().ToString();
-            SG_SilicaGelVolume.Text = sg.SlilcaGelVolume().ToString();
+            SG_PackageVolume.Text = sg.PackageVolume().ToString("0,0.00");
+            SG_SilicaGelVolume.Text = sg.SlilcaGelVolume().ToString("0,0.00");
         }
 
         private void btnOXASubmit_Click(object sender, EventArgs e)
         {
             oxygenAbs oxa = new oxygenAbs((float)ox_length.Value, (float)ox_width.Value, (float)ox_height.Value, (float)ox_foodWeight.Value);
-            OX_PackageVolume.Text = oxa.PackageVolume().ToString();
-            OX_Oxygen_Absorber_Volume.Text = oxa.OxygenAbsorberVolume().ToString();
+            OX_PackageVolume.Text = oxa.PackageVolume().ToString("0,0.00");
+            OX_Oxygen_Absorber_Volume.Text = oxa.OxygenAbsorberVolume().ToString("0,0.00");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Oxygen_absorber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer2_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void SG_PackageVolume_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
