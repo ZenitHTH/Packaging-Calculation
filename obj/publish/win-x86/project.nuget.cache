@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C67f9QJoGRVpn1QnkIbfk608FVRKXrNTIGIge3BmWz9uPCy74LzhyN35oWjsVZq4l0ThbJ+BlmD6DHArmCEEBQ==",
+  "dgSpecHash": "//a6UYY3dSimY4kegwRZkcSuhQirfSuSO85GJMrs/27yvXolo3maFfFpwXU28VMd/4i93oh5Lcu2zVLPaciIRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\peter\\source\\repos\\ZenitHTH\\Packaging-Calculation\\Packaging Calculation.csproj",
+  "projectFilePath": "C:\\Users\\peter\\source\\repos\\Packaging Calculation\\Packaging Calculation\\Packaging Calculation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\peter\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.7\\microsoft.netcore.app.runtime.win-x86.6.0.7.nupkg.sha512",
     "C:\\Users\\peter\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.7.nupkg.sha512",

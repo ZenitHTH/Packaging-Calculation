@@ -33,3 +33,4 @@ C:\Users\peter\source\repos\ZenitHTH\Packaging-Calculation\obj\Release\net6.0-wi
 C:\Users\peter\source\repos\ZenitHTH\Packaging-Calculation\obj\Release\net6.0-windows\Packaging Calculation.pdb
 C:\Users\peter\source\repos\ZenitHTH\Packaging-Calculation\obj\Release\net6.0-windows\Packaging Calculation.genruntimeconfig.cache
 C:\Users\peter\source\repos\ZenitHTH\Packaging-Calculation\obj\Release\net6.0-windows\ref\Packaging Calculation.dll
+C:\Users\peter\source\repos\Packaging Calculation\Packaging Calculation\obj\Release\net6.0-windows\Packaging_Calculation.Properties.Resources.resources
