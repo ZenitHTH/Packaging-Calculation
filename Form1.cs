@@ -1,7 +1,7 @@
 namespace Packaging_Calculation
 {
-    using silicaGel = Packaging_Calculation.SilicaGel;
     using oxygenAbs = Packaging_Calculation.OxygenAbsorber;
+    using silicaGel = Packaging_Calculation.SilicaGel;
     public partial class Form1 : Form
     {
         public Form1()
@@ -14,57 +14,7 @@ namespace Packaging_Calculation
 
         }
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // Silica Gel
-
-        private void sg_Length_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void sg_width_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sg_height_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         // Oxygen Absorber
-        private void ox_length_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ox_width_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ox_height_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ox_foodWeight_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnSGSubmit_Click(object sender, EventArgs e)
         {
@@ -80,24 +30,19 @@ namespace Packaging_Calculation
             OX_Oxygen_Absorber_Volume.Text = oxa.OxygenAbsorberVolume().ToString("0,0.00");
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Reset_SG_Click(object sender, EventArgs e)
         {
-
+            sg_height.Value = 0;
+            sg_Length.Value = 0;
+            sg_width.Value = 0;
         }
 
-        private void Oxygen_absorber_Click(object sender, EventArgs e)
+        private void Reset_OX_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void splitContainer2_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void SG_PackageVolume_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
+            ox_foodWeight.Value = 0;
+            ox_height.Value = 0;
+            ox_length.Value = 0;
+            ox_width.Value = 0;
         }
     }
 }

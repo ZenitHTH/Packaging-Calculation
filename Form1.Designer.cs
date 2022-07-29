@@ -63,6 +63,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Reset_SG = new System.Windows.Forms.Button();
+            this.Reset_OX = new System.Windows.Forms.Button();
             Main = new System.Windows.Forms.TabControl();
             Main.SuspendLayout();
             this.Slilca_gen.SuspendLayout();
@@ -116,6 +118,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.Reset_SG);
             this.splitContainer1.Panel1.Controls.Add(this.btnSGSubmit);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
@@ -133,11 +136,10 @@
             this.splitContainer1.Size = new System.Drawing.Size(467, 343);
             this.splitContainer1.SplitterDistance = 180;
             this.splitContainer1.TabIndex = 0;
-            this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
             // btnSGSubmit
             // 
-            this.btnSGSubmit.Location = new System.Drawing.Point(52, 233);
+            this.btnSGSubmit.Location = new System.Drawing.Point(45, 206);
             this.btnSGSubmit.Name = "btnSGSubmit";
             this.btnSGSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSGSubmit.TabIndex = 4;
@@ -189,7 +191,6 @@
             this.sg_height.Name = "sg_height";
             this.sg_height.Size = new System.Drawing.Size(152, 23);
             this.sg_height.TabIndex = 2;
-            this.sg_height.ValueChanged += new System.EventHandler(this.sg_height_ValueChanged);
             // 
             // sg_width
             // 
@@ -208,7 +209,6 @@
             this.sg_width.Name = "sg_width";
             this.sg_width.Size = new System.Drawing.Size(152, 23);
             this.sg_width.TabIndex = 1;
-            this.sg_width.ValueChanged += new System.EventHandler(this.sg_width_ValueChanged);
             // 
             // sg_Length
             // 
@@ -227,7 +227,6 @@
             this.sg_Length.Name = "sg_Length";
             this.sg_Length.Size = new System.Drawing.Size(152, 23);
             this.sg_Length.TabIndex = 0;
-            this.sg_Length.ValueChanged += new System.EventHandler(this.sg_Length_ValueChanged);
             // 
             // SG_SilicaGelVolume
             // 
@@ -248,7 +247,6 @@
             this.SG_PackageVolume.ReadOnly = true;
             this.SG_PackageVolume.Size = new System.Drawing.Size(231, 35);
             this.SG_PackageVolume.TabIndex = 2;
-            this.SG_PackageVolume.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.SG_PackageVolume_MaskInputRejected);
             // 
             // label9
             // 
@@ -280,7 +278,6 @@
             this.Oxygen_absorber.TabIndex = 1;
             this.Oxygen_absorber.Text = "Oxygen Absorber";
             this.Oxygen_absorber.UseVisualStyleBackColor = true;
-            this.Oxygen_absorber.Click += new System.EventHandler(this.Oxygen_absorber_Click);
             // 
             // splitContainer2
             // 
@@ -289,6 +286,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.Reset_OX);
             this.splitContainer2.Panel1.Controls.Add(this.btnOXASubmit);
             this.splitContainer2.Panel1.Controls.Add(this.label7);
             this.splitContainer2.Panel1.Controls.Add(this.ox_foodWeight);
@@ -298,7 +296,6 @@
             this.splitContainer2.Panel1.Controls.Add(this.ox_height);
             this.splitContainer2.Panel1.Controls.Add(this.ox_width);
             this.splitContainer2.Panel1.Controls.Add(this.ox_length);
-            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel1_Paint);
             // 
             // splitContainer2.Panel2
             // 
@@ -306,15 +303,13 @@
             this.splitContainer2.Panel2.Controls.Add(this.OX_Oxygen_Absorber_Volume);
             this.splitContainer2.Panel2.Controls.Add(this.label10);
             this.splitContainer2.Panel2.Controls.Add(this.label11);
-            this.splitContainer2.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel2_Paint);
             this.splitContainer2.Size = new System.Drawing.Size(755, 343);
             this.splitContainer2.SplitterDistance = 180;
             this.splitContainer2.TabIndex = 0;
-            this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer2_SplitterMoved);
             // 
             // btnOXASubmit
             // 
-            this.btnOXASubmit.Location = new System.Drawing.Point(52, 270);
+            this.btnOXASubmit.Location = new System.Drawing.Point(42, 246);
             this.btnOXASubmit.Name = "btnOXASubmit";
             this.btnOXASubmit.Size = new System.Drawing.Size(75, 23);
             this.btnOXASubmit.TabIndex = 14;
@@ -348,7 +343,6 @@
             this.ox_foodWeight.Name = "ox_foodWeight";
             this.ox_foodWeight.Size = new System.Drawing.Size(152, 23);
             this.ox_foodWeight.TabIndex = 12;
-            this.ox_foodWeight.ValueChanged += new System.EventHandler(this.ox_foodWeight_ValueChanged);
             // 
             // label4
             // 
@@ -394,7 +388,6 @@
             this.ox_height.Name = "ox_height";
             this.ox_height.Size = new System.Drawing.Size(152, 23);
             this.ox_height.TabIndex = 8;
-            this.ox_height.ValueChanged += new System.EventHandler(this.ox_height_ValueChanged);
             // 
             // ox_width
             // 
@@ -413,7 +406,6 @@
             this.ox_width.Name = "ox_width";
             this.ox_width.Size = new System.Drawing.Size(152, 23);
             this.ox_width.TabIndex = 7;
-            this.ox_width.ValueChanged += new System.EventHandler(this.ox_width_ValueChanged);
             // 
             // ox_length
             // 
@@ -432,7 +424,6 @@
             this.ox_length.Name = "ox_length";
             this.ox_length.Size = new System.Drawing.Size(152, 23);
             this.ox_length.TabIndex = 6;
-            this.ox_length.ValueChanged += new System.EventHandler(this.ox_length_ValueChanged);
             // 
             // OX_PackageVolume
             // 
@@ -523,6 +514,26 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // Reset_SG
+            // 
+            this.Reset_SG.Location = new System.Drawing.Point(45, 251);
+            this.Reset_SG.Name = "Reset_SG";
+            this.Reset_SG.Size = new System.Drawing.Size(75, 23);
+            this.Reset_SG.TabIndex = 6;
+            this.Reset_SG.Text = "Reset";
+            this.Reset_SG.UseVisualStyleBackColor = true;
+            this.Reset_SG.Click += new System.EventHandler(this.Reset_SG_Click);
+            // 
+            // Reset_OX
+            // 
+            this.Reset_OX.Location = new System.Drawing.Point(42, 290);
+            this.Reset_OX.Name = "Reset_OX";
+            this.Reset_OX.Size = new System.Drawing.Size(75, 23);
+            this.Reset_OX.TabIndex = 15;
+            this.Reset_OX.Text = "Reset";
+            this.Reset_OX.UseVisualStyleBackColor = true;
+            this.Reset_OX.Click += new System.EventHandler(this.Reset_OX_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -541,7 +552,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Packing Calcultion";
-            this.Load += new System.EventHandler(this.Form1_Load);
             Main.ResumeLayout(false);
             this.Slilca_gen.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -606,5 +616,7 @@
         private PictureBox pictureBox1;
         private Label label14;
         private PictureBox pictureBox2;
+        private Button Reset_SG;
+        private Button Reset_OX;
     }
 }
